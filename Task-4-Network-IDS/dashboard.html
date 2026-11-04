@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suricata IDS Dashboard</title>
+<style>
+body{margin:0;font-family:system-ui,Arial,sans-serif;background:#0f1b26;color:#e6eef5}
+header{padding:24px 32px;background:#0a131c;border-bottom:3px solid #e5484d}
+h1{margin:0;font-size:1.6rem} header p{margin:6px 0 0;color:#9fb3c4}
+.cards{display:flex;gap:16px;padding:20px 32px;flex-wrap:wrap}
+.card{background:#16273a;border-radius:8px;padding:16px 22px;min-width:150px}
+.card b{display:block;font-size:2rem} .card span{color:#9fb3c4}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:16px;padding:0 32px 32px}
+.panel{background:#16273a;border-radius:8px;padding:16px 20px} .wide{grid-column:1/-1}
+h2{margin:0 0 12px;font-size:1.05rem}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;margin:10px 0}
+.label{width:100%;font-size:.85rem}
+.track{flex:1;background:#0f1b26;border-radius:4px;height:16px} .bar{height:16px;border-radius:4px}
+.num{width:44px;text-align:right;font-weight:600}
+table{width:100%;border-collapse:collapse;font-size:.82rem} td,th{padding:5px 6px;border-bottom:1px solid #243a52;text-align:left}
+ul{margin:0;padding-left:18px;font-size:.85rem} li{margin:4px 0}
+</style></head><body>
+<header><h1>Network Intrusion Detection Dashboard</h1>
+<p>Suricata alerts from logs/eve.json | built 2026-11-03 06:24:38</p></header>
+<div class="cards">
+<div class="card"><b>269</b><span>Total alerts</span></div>
+<div class="card"><b>3</b><span>Rules triggered</span></div>
+<div class="card"><b>1</b><span>Source addresses</span></div>
+<div class="card"><b>1</b><span>Addresses blocked</span></div>
+</div>
+<div class="grid">
+<div class="panel"><h2>Alerts by rule</h2><div class="row"><div class="label">LOCAL Possible TCP SYN port scan</div><div class="track"><div class="bar" style="width:100%;background:#e5484d"></div></div><div class="num">255</div></div><div class="row"><div class="label">LOCAL ICMP echo request (ping) detected</div><div class="track"><div class="bar" style="width:3%;background:#e5484d"></div></div><div class="num">10</div></div><div class="row"><div class="label">LOCAL SSH connection attempt</div><div class="track"><div class="bar" style="width:2%;background:#e5484d"></div></div><div class="num">4</div></div></div>
+<div class="panel"><h2>Alerts by source address</h2><div class="row"><div class="label">192.168.100.2</div><div class="track"><div class="bar" style="width:100%;background:#f5a524"></div></div><div class="num">269</div></div></div>
+<div class="panel"><h2>Alerts per minute</h2><div class="row"><div class="label">05:18</div><div class="track"><div class="bar" style="width:100%;background:#3b9eff"></div></div><div class="num">87</div></div><div class="row"><div class="label">05:42</div><div class="track"><div class="bar" style="width:98%;background:#3b9eff"></div></div><div class="num">86</div></div><div class="row"><div class="label">06:08</div><div class="track"><div class="bar" style="width:98%;background:#3b9eff"></div></div><div class="num">86</div></div><div class="row"><div class="label">05:17</div><div class="track"><div class="bar" style="width:3%;background:#3b9eff"></div></div><div class="num">3</div></div><div class="row"><div class="label">06:09</div><div class="track"><div class="bar" style="width:3%;background:#3b9eff"></div></div><div class="num">3</div></div><div class="row"><div class="label">06:07</div><div class="track"><div class="bar" style="width:2%;background:#3b9eff"></div></div><div class="num">2</div></div><div class="row"><div class="label">06:12</div><div class="track"><div class="bar" style="width:2%;background:#3b9eff"></div></div><div class="num">2</div></div></div>
+<div class="panel"><h2>Alerts by severity</h2><div class="row"><div class="label">Severity 2</div><div class="track"><div class="bar" style="width:100%;background:#7c6cf0"></div></div><div class="num">255</div></div><div class="row"><div class="label">Severity 3</div><div class="track"><div class="bar" style="width:3%;background:#7c6cf0"></div></div><div class="num">10</div></div><div class="row"><div class="label">Severity 1</div><div class="track"><div class="bar" style="width:2%;background:#7c6cf0"></div></div><div class="num">4</div></div></div>
+<div class="panel"><h2>Automatic response actions</h2><ul><li>2026-11-03 05:42:51 RESPONSE would block 192.168.100.2 (dry run)</li><li>2026-11-03 06:08:01 RESPONSE blocked 192.168.100.2 (exit code 0)</li><li>2026-11-03 06:12:04 UNBLOCK 192.168.100.2 (exit code 0)</li></ul></div>
+<div class="panel wide"><h2>Latest alerts</h2><table><tr><th>Time</th><th>Source</th><th>Target</th><th>Rule</th></tr><tr><td>2026-11-03 06:12:05</td><td>192.168.100.2</td><td>192.168.100.1</td><td>LOCAL ICMP echo request (ping) detected</td></tr><tr><td>2026-11-03 06:12:04</td><td>192.168.100.2</td><td>192.168.100.1</td><td>LOCAL ICMP echo request (ping) detected</td></tr><tr><td>2026-11-03 06:09:48</td><td>192.168.100.2</td><td>192.168.100.1</td><td>LOCAL ICMP echo request (ping) detected</td></tr><tr><td>2026-11-03 06:09:47</td><td>192.168.100.2</td><td>192.168.100.1</td><td>LOCAL ICMP echo request (ping) detected</td></tr><tr><td>2026-11-03 06:09:46</td><td>192.168.100.2</td><td>192.168.100.1</td><td>LOCAL ICMP echo request (ping) detected</td></tr><tr><td>2026-11-03 06:08:00</td><td>192.168.100.2</td><td>192.168.100.1</td><td>LOCAL Possible TCP SYN port scan</td></tr><tr><td>2026-11-03 06:08:00</td><td>192.168.100.2</td><td>192.168.100.1</td><td>LOCAL Possible TCP SYN port scan</td></tr><tr><td>2026-11-03 06:08:00</td><td>192.168.100.2</td><td>192.168.100.1</td><td>LOCAL Possible TCP SYN port scan</td></tr><tr><td>2026-11-03 06:08:00</td><td>192.168.100.2</td><td>192.168.100.1</td><td>LOCAL Possible TCP SYN port scan</td></tr><tr><td>2026-11-03 06:08:00</td><td>192.168.100.2</td><td>192.168.100.1</td><td>LOCAL Possible TCP SYN port scan</td></tr><tr><td>2026-11-03 06:08:00</td><td>192.168.100.2</td><td>192.168.100.1</td><td>LOCAL Possible TCP SYN port scan</td></tr><tr><td>2026-11-03 06:08:00</td><td>192.168.100.2</td><td>192.168.100.1</td><td>LOCAL Possible TCP SYN port scan</td></tr></table></div>
+</div></body></html>
