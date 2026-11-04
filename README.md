@@ -1,3 +1,4 @@
+[README (6).md](https://github.com/user-attachments/files/34356429/README.6.md)
 # CodeAlpha Cybersecurity Internship
 
 This repository contains my work for the CodeAlpha Cybersecurity Internship. Each task has its own folder with a README, the code or deliverable, and screenshots as evidence.
@@ -9,8 +10,7 @@ This repository contains my work for the CodeAlpha Cybersecurity Internship. Eac
 | 1 | [Task-1-Network-Traffic-Analyzer](Task-1-Network-Traffic-Analyzer) | A Python and Scapy packet sniffer, with the capture analyzed in Wireshark |
 | 2 | [Task-2-Phishing-Awareness-Training](Task-2-Phishing-Awareness-Training) | An interactive phishing awareness module with a quiz |
 | 3 | [Task-3-Secure-Coding-Review](Task-3-Secure-Coding-Review) | A security review of a Flask application using Bandit and manual inspection |
-
-More tasks will be added to this repository as they are completed.
+| 4 | [Task-4-Network-IDS](Task-4-Network-IDS) | A Suricata network intrusion detection system with custom rules, automatic blocking and a dashboard |
 
 ## Repository Structure
 
@@ -26,15 +26,22 @@ CodeAlpha_Cybersecurity_Internship/
 │   ├── README.md
 │   ├── index.html
 │   └── screenshots/
-└── Task-3-Secure-Coding-Review/
+├── Task-3-Secure-Coding-Review/
+│   ├── README.md
+│   ├── reports/
+│   └── screenshots/
+└── Task-4-Network-IDS/
     ├── README.md
-    ├── reports/
+    ├── rules/
+    ├── scripts/
+    ├── dashboard/
+    ├── logs/
     └── screenshots/
 ```
 
 ## Tools Used
 
-Kali Linux, Python 3, Scapy, Wireshark, Bandit, HTML, CSS and JavaScript.
+Kali Linux, Python 3, Scapy, Wireshark, Bandit, Suricata, Nmap, iptables, HTML, CSS and JavaScript.
 
 ## Notes
 
